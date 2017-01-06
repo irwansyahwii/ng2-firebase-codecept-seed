@@ -1,0 +1,23 @@
+{
+  "tests": "./test/lib/test/*_test.js",
+  "timeout": 10000,
+  "output": "./test/output",
+  "helpers": {
+    "Nightmare": {
+      "url": "http://localhost:4200",
+      "webPreferences": {
+        "partition": "nopersist"
+      }
+    },
+    "CustomHelper": {
+      "require": "./test/lib/test/CustomHelper.js"
+    }
+  },
+  "include": {
+    "I": "./test/lib/test/steps_file.js",
+    "customGPOPage": "./test/lib/test/CustomGPO.js"
+  },
+  "bootstrap": false,
+  "mocha": {},
+  "name": "wanderful-hotel-admin"
+}
